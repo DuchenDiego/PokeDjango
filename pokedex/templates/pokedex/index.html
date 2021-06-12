@@ -1,0 +1,7 @@
+{% extends '../base.html' %}
+{% block subtitle %}Lista General Pokemons{% endblock subtitle %}
+{% block content %}
+    {% csrf_token %}
+    {{ crear_form }}
+    <input type="submit" value="Crear Pokemon">
+{% endblock content %}
