@@ -9,9 +9,10 @@ def login_user(request):
         username = request.POST['username'],
         password = request.POST['password']
     )
-    if user is not None : 
+    if user is not None :
+        print(type(user))
         login(request, user) # Crea sesion 
-        return HttpResponseRedirect(reverse(''))
+        return HttpResponseRedirect(reverse('pokedex:listar_pokemon'))
     else:
         return HttpResponse('No existe usuario', status=403)
 

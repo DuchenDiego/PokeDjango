@@ -20,4 +20,5 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pokedex/', include('pokedex.urls')),
+    path('authentication/', include('authentication.urls')),
 ]
